@@ -24,7 +24,7 @@ public class controlador {
     }
     
     @PostMapping
-    public bd agergar(@RequestBody bd p){
+    public bd agregar(@RequestBody bd p){
         return service.add(p);
     }
 }

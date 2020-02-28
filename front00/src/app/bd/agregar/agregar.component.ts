@@ -12,10 +12,10 @@ export class AgregarComponent implements OnInit {
 
   constructor(private router:Router, private service:ServiceService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
-  Guardar(bd:Datos){
-    this.service.createRegistro(bd)
+  Guardar($event:Datos){
+    this.service.createRegistro($event)
     .subscribe(data=>{
       alert("existoso");
       this.router.navigate(["listar"])

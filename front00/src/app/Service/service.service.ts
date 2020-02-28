@@ -18,6 +18,5 @@ export class ServiceService {
     createRegistro(bd:Datos){
       return this.http.post<Datos>(this.Url,bd);
     }
-
   
 }
