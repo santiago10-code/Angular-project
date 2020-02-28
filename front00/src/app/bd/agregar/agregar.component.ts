@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServiceService } from '../../Service/service.service'
+import { Datos } from 'src/app/Modelo/bd';
 
 @Component({
   selector: 'app-agregar',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgregarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit(): void {
+  }
+  Guardar(bd:Datos){
+    this.service.createRegistro(bd)
+    .subscribe(data=>{
+      alert("existoso");
+      this.router.navigate(["listar"])
+    })
   }
 
 }

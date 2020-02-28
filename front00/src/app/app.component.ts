@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ListarComponent } from './bd/listar/listar.component';
+
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'front00';
   constructor(private router:Router){}
   Listar(){
-     this.router.navigate(["Listar"]);    
+     this.router.navigate(["listar"]);    
   }
   Nuevo(){
     this.router.navigate(["agregar"]);     

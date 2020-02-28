@@ -6,7 +6,7 @@ import { EditarComponent } from './bd/editar/editar.component';
 
 
 const routes: Routes = [
-  {path:'Listar',component:ListarComponent},
+  {path:'listar',component:ListarComponent},
   {path:'agregar',component:AgregarComponent},
   {path:'editar',component:EditarComponent}
 ];

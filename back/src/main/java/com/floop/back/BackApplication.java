@@ -3,7 +3,7 @@ package com.floop.back;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"com"})
+@SpringBootApplication
 public class BackApplication {
 
 	public static void main(String[] args) {

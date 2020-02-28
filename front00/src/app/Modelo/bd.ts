@@ -1,5 +1,5 @@
-export class bd{
+export class Datos{
     id:number;
-    name:String;
-    secondary:String;
+    observacion:String;
+    texto:String;
 }

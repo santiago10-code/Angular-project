@@ -2,7 +2,8 @@
 package com.floop.back;
 
 import java.util.List;
-   
+
+
 public interface bdServices {
     List<bd>listar();
     bd listarId(int id);

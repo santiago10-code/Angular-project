@@ -14,10 +14,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="text-center">
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    <tr *ngFor="let Datos of bd" class="text-center">
+                        <td>{{Datos.id}}</td>
+                        <td>{{Datos.observacion}}</td>
+                        <td>{{Datos.texto}}</td>
                         <td>
                             <button class="btn btn-warning">Editar</button>
                             <button class="btn btn-danger" style="margin-left: 10px">Delete</button>

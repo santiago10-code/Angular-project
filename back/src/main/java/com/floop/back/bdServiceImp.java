@@ -2,8 +2,9 @@ package com.floop.back;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class bdServiceImp implements bdServices {
     
     @Autowired
@@ -21,7 +22,7 @@ public class bdServiceImp implements bdServices {
 
     @Override
     public bd add(bd p) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return repositorio.save(p);
     }
 
     @Override

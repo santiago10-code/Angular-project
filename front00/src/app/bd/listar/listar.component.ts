@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServiceService } from '../../Service/service.service'
+import { Datos } from 'src/app/Modelo/bd';
+
+
+  
 
 @Component({
   selector: 'app-listar',
@@ -7,9 +13,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarComponent implements OnInit {
 
-  constructor() { }
+  bd:Datos[]
+  constructor(private service:ServiceService, private router:Router) {    
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.service.getDatos()
+    .subscribe(data=>{this.bd =data;})
   }
 
 }
