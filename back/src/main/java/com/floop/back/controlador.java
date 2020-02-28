@@ -10,12 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "http:localhost:4200",maxAge = 3600)
 @RestController
 @RequestMapping({"/bd"})
+
 public class controlador {
+     
     @Autowired
-    bdService service;
+    bdServices service;
     
     @GetMapping
     public List<bd>listar(){
-    return service.listar();
+      return service.listar();
     }
 }

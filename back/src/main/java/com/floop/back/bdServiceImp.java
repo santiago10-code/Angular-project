@@ -2,12 +2,12 @@ package com.floop.back;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
-public class bdServiceImp implements bdService{
-    @Autowired  
-    private bdRepository repositorio;
+
+public class bdServiceImp implements bdServices {
+    
+    @Autowired
+    private bdRepositorio repositorio;
 
     @Override
     public List<bd> listar() {
@@ -20,12 +20,12 @@ public class bdServiceImp implements bdService{
     }
 
     @Override
-    public bd add(bd b) {
+    public bd add(bd p) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public bd edit(bd b) {
+    public bd edit(bd p) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

@@ -1,42 +1,43 @@
 package com.floop.back;
 
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "bd")
-public class bd {
+@Table(name = "Dato")
+public class bd{
     
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column
-    private String obaservacion;
+    private String observacion;
     @Column
     private String texto;
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setObaservacion(String obaservacion) {
-        this.obaservacion = obaservacion;
-    }
-
-    public void setTexto(String texto) {
-        this.texto = texto;
-    }
 
     public int getId() {
         return id;
     }
 
-    public String getObaservacion() {
-        return obaservacion;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getObservacion() {
+        return observacion;
+    }
+
+    public void setObservacion(String observacion) {
+        this.observacion = observacion;
     }
 
     public String getTexto() {
         return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
     }
     
 }
