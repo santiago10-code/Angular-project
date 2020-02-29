@@ -10,12 +10,13 @@ import { Datos } from 'src/app/Modelo/bd';
 })
 export class AgregarComponent implements OnInit {
 
+  bd:Datos=new Datos();
   constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit() {
   }
-  Guardar($event:Datos){
-    this.service.createRegistro($event)
+  Guardar(){
+    this.service.createRegistro(this.bd)
     .subscribe(data=>{
       alert("existoso");
       this.router.navigate(["listar"])
