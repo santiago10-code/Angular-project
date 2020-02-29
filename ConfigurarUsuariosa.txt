@@ -1,0 +1,4 @@
+USE [master]
+GO
+ALTER LOGIN [sa] WITH PASSWORD=N'123'
+GO
