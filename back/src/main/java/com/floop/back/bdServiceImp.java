@@ -17,7 +17,7 @@ public class bdServiceImp implements bdServices {
 
     @Override
     public bd listarId(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return repositorio.findById(id);
     }
 
     @Override
@@ -27,12 +27,16 @@ public class bdServiceImp implements bdServices {
 
     @Override
     public bd edit(bd p) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return repositorio.save(p);
     }
 
     @Override
     public bd delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        bd p=repositorio.findById(id);
+        if(p!=null){
+            repositorio.delete(p);
+        }
+       return p;
     }
     
 }

@@ -19,8 +19,8 @@
                         <td>{{Datos.observacion}}</td>
                         <td>{{Datos.texto}}</td>
                         <td>
-                            <button class="btn btn-warning">Editar</button>
-                            <button class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                            <button (click)="Editar(Datos)" class="btn btn-warning">Editar</button>
+                            <button (click)="Delete(Datos)" style="margin-left: 10px">Delete</button>
                         </td>
                     </tr>
                 </tbody>

@@ -18,5 +18,14 @@ export class ServiceService {
     createRegistro(bd:Datos){
       return this.http.post<Datos>(this.Url,bd);
     }
+    getDatoId(id:number){
+      return this.http.get<Datos>(this.Url+"/"+id);
+    }
+    updateDato(bd:Datos){
+      return this.http.put<Datos>(this.Url+"/"+bd.id,bd);
+    }
+    deleteDato(bd:Datos){
+      return this.http.delete<Datos>(this.Url+"/"+bd.id);
+    }
   
 }
